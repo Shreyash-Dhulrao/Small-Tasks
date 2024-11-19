@@ -2,26 +2,22 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const historySlice = createSlice({
     name: "history",
-    initialState : {
-        newHistory:[
-            {
-                history:"some history"
-            }
+    initialState: {
+        newHistory: [
+            
         ]
     },
     reducers: {
-        addHistory : (state, action) =>{
-            console.log(action.payload)
-            if(action.payload=== ""){
+        addHistory: (state, action) => {
+            if (action.payload === "") {
                 return
             }
-            else{
+            else {
                 let a = {
                     history: action.payload
                 }
                 state.newHistory.push(a)
             }
-            console.log(state.history)
         }
     }
 })

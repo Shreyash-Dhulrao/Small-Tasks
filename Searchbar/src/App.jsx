@@ -1,6 +1,7 @@
 import React from 'react'
 import DataShow from './Components/DataShow'
 import { Routes , Route } from 'react-router-dom'
+import History from './Components/History'
 
 const App = () => {
   return (

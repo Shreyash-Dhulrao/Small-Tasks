@@ -57,7 +57,7 @@ const Searchbar = ({ setfirst }) => {
                 </form>
             </div>
             <div>
-                <Link to="/history">History</Link>
+                <Link to="/history" className='px-5 py-2 m-3 bg-zinc-200'>History</Link>
             </div>
         </div>
     )
