@@ -10,7 +10,6 @@ const comment = () => {
         e.preventDefault();
         console.log(commentTarget)
         dispatch(addComment(comment))
-
         setcomment("")
     }
 

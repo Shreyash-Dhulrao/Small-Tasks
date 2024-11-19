@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import Data from './Data'
+import { useDispatch } from 'react-redux'
+import { addHistory } from '../Redux/History'
+import { Link } from 'react-router-dom'
 
 const Searchbar = ({ setfirst }) => {
     const [search, setsearch] = useState('')
     const [val, setval] = useState(true)
-
+    const dispatch = useDispatch()
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -12,6 +15,7 @@ const Searchbar = ({ setfirst }) => {
             let a = items.name.toLowerCase().includes(search.toLowerCase())
             return a 
         })
+        dispatch(addHistory(search))
 
         if (Filter.length > 0) {
             setfirst(Filter)
@@ -23,6 +27,7 @@ const Searchbar = ({ setfirst }) => {
             setfirst(Data)
         }
     }
+
     return (
         <div>
             <div className='flex justify-center p-3'>
@@ -50,6 +55,9 @@ const Searchbar = ({ setfirst }) => {
                         </div>
                     )}
                 </form>
+            </div>
+            <div>
+                <Link to="/history">History</Link>
             </div>
         </div>
     )

@@ -4,6 +4,7 @@ const initialState = {
     commentLength: 0,
     commentText: "",
     commentTarget: 0,
+    
 }
 
 export const commentSlice = createSlice({

@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux'
 
 const VideoFiles = () => {
     const [commentTarget , setCommentTarget] = useState(useSelector(items=>items.comment.commentTarget))
+    console.log(commentTarget)
   return (
     <div className='grid grid-cols-3 gap-3 p-3'>
       {videos.map((items)=>{
