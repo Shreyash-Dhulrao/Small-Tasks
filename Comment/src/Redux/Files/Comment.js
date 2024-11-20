@@ -17,10 +17,9 @@ export const commentSlice = createSlice({
             })
         },
         removeComment: (state, action) =>{},
-        editComment:(state,action)=>{}
     }
 })
 
-export const {addComment, removeComment , editComment} = commentSlice.actions
+export const {addComment, removeComment} = commentSlice.actions
 
 export default commentSlice.reducer

@@ -23,7 +23,7 @@ const comment = ({target}) => {
             <button type='submit' className='bg-zinc-100  px-2 py-1 rounded-md'>Comment</button>
         </form>
 
-        <div className='h-20 w-full overflow-y-scroll my-2'>
+        <div className='h-20 w-full overflow-y-scroll no-scrollbar my-2'>
             {
                 commentData.map((items , index)=>{
                     if(items.target === target){

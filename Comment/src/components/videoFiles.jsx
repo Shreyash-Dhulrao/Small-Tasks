@@ -28,10 +28,12 @@ const VideoFiles = () => {
                 </div>
                 <div>
                     <h2 className='font-semibold text-xl'>{items.title}</h2>
-                    <div>
+                    <div className='flex items-center justify-between'>
                         <p>Likes: {items.likes}</p>
                         <p>Comments: {commentCount}</p>
-                        <Comment  target={items.id}/>
+                    </div>
+                    <div>
+                    <Comment  target={items.id}/>
                     </div>
                 </div>
 
