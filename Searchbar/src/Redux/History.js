@@ -3,9 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const historySlice = createSlice({
     name: "history",
     initialState: {
-        newHistory: [
-
-        ]
+        newHistory: []
     },
     reducers: {
         addHistory: (state, action) => {
