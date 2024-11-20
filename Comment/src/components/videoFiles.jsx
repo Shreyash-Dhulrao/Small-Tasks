@@ -1,5 +1,5 @@
 import React from 'react'
-import { videos } from './Data'
+import videos from './Data'
 import Comment from './comment'
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
@@ -19,7 +19,7 @@ const VideoFiles = () => {
                     <h2 className='font-semibold text-xl'>{items.title}</h2>
                     <div>
                         <p>Likes: {items.likes}</p>
-                        <Comment />
+                        <Comment  target={items.id}/>
                     </div>
                 </div>
 

@@ -1,4 +1,4 @@
-export const videos = [
+const videos = [
     {
       id: "video1",
       title: "Learn JavaScript Basics",
@@ -32,4 +32,6 @@ export const videos = [
       views: 1400
     }
   ];
+
+  export default videos
   

@@ -2,14 +2,18 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {addComment} from '../Redux/Files/Comment'
 
-const comment = () => {
+const comment = ({target}) => {
     const [comment, setcomment] = useState("")
     const dispatch = useDispatch()
     const commentTarget = useSelector(items=> items.comment.commentTarget)
     const handleSubmit =(e)=>{
         e.preventDefault();
         console.log(commentTarget)
-        dispatch(addComment(comment))
+        const a = {
+            comment, 
+            target
+        }
+        dispatch(addComment(a))
         setcomment("")
     }
 
